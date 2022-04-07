@@ -1,0 +1,27 @@
+
+table{
+  th{
+    white-space: nowrap; 
+  }
+  td{
+    font-size: 13px;
+    line-height: 30px;
+    max-width: 100px;
+    overflow-wrap: break-word;
+    i{
+      cursor: pointer;
+    }
+  }
+}
+
+
+//Table 按鈕
+@each $name, $colors in $dataTableColors {
+  .table-#{$name} {
+    color:$colors;
+    line-height: 30px;
+    &:hover{
+        color: darken($colors,15%);
+    }
+  }
+}

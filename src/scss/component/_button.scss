@@ -1,0 +1,37 @@
+
+@mixin button($background-color:$text,$fontColor: $white,$hover-color:#ccc,$hover-fontColor:$white) {
+    height: 35px;
+    // min-width: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin:0px 5px;
+    background-color: $background-color;
+    color: $fontColor;
+     &:hover{
+    background-color: $hover-color;
+    color: $hover-fontColor;
+    font-size: 16px;
+    font-weight: 400;
+    }
+    &:focus{
+    font-size: 16px;
+    font-weight: 400;
+    }
+}
+// 新增  //
+.jess-btn-add{
+    @include button($background-color:rgb(149, 157, 179),$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white)
+}
+// 送出  //
+.jess-btn-submit{
+    @include button($background-color:rgb(221, 221, 221),$fontColor: rgb(95, 95, 95),$hover-color:$hover,$hover-fontColor:$white)
+}
+// 下一步  //
+.jess-btn-nextStep{
+    @include button($background-color:rgb(255, 255, 255),$fontColor: rgb(95, 95, 95),$hover-color:rgb(124, 124, 124),$hover-fontColor:$white);
+    border-color:rgb(124, 124, 124);
+}
+
+
+
